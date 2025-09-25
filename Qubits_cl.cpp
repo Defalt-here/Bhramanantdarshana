@@ -113,3 +113,8 @@ public:
     }
     
 };
+int main(){
+    Qubit q(0.2,0.8);
+    q.Print();
+    return 0;
+}
