@@ -59,5 +59,6 @@
         "bitset": "cpp",
         "optional": "cpp",
         "random": "cpp"
-    }
+    },
+    "githubPullRequests.experimental.notificationsView": true
 }
