@@ -1,0 +1,3 @@
+# single Hadamard on 1 qubit — produces |+⟩
+qubits 1
+H 0

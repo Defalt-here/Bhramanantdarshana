@@ -1,0 +1,6 @@
+basis_combo,n_samples,correlation,S_value
+a=Z   b=pi/4,10000,0.7072,
+a=Z   b=3pi/4,10000,-0.712,
+a=X   b=pi/4,10000,0.7122,
+a=X   b=3pi/4,10000,0.7046,
+S,40000,,2.836

@@ -1,0 +1,15 @@
+# Bernstein–Vazirani recovering s = "101" (n = 3 input qubits + 1 ancilla).
+# Oracle for f(x) = s · x mod 2 with s = 101 means: flip ancilla whenever
+# x_0 ⊕ x_2 = 1, i.e. apply CNOT from each set bit of s into the ancilla.
+qubits 4
+X 3
+H 0
+H 1
+H 2
+H 3
+# Oracle: CNOT from input qubits 0 and 2 (set bits of s = 101) into ancilla
+CNOT 0 3
+CNOT 2 3
+H 0
+H 1
+H 2

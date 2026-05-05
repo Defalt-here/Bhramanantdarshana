@@ -1,0 +1,7 @@
+# Deutsch with f(x) = x (balanced). Identity oracle is CNOT(input, ancilla).
+qubits 2
+X 1
+H 0
+H 1
+CNOT 0 1
+H 0

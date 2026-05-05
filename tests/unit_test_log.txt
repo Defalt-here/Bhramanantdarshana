@@ -1,0 +1,70 @@
+qsim unit test run
+  timestamp : 2026-05-05T18:29:18
+  rng seed  : 20260505
+
+  PASS  Integration.SingleHadamardOnOneQubit
+  PASS  Integration.BellPhiPlusPreparation
+  PASS  Integration.GHZPreparation
+  PASS  Integration.DeutschConstant0YieldsInputZero
+  PASS  Integration.DeutschConstant1YieldsInputZero
+  PASS  Integration.DeutschIdentityYieldsInputOne
+  PASS  Integration.DeutschNotYieldsInputOne
+  PASS  Integration.AllPauliXYZComposition
+  PASS  Measurement.CollapseOnBasisStateIsDeterministic
+  PASS  Measurement.PeekDoesNotMutateState
+  PASS  Measurement.RepeatedCollapsesAreSticky
+  PASS  Measurement.BornProbabilitiesMatchEmpirical
+  PASS  Measurement.PeekThenCollapseDistributesIdentically
+  PASS  Property.HSquaredIsIdentity
+  PASS  Property.XSquaredIsIdentity
+  PASS  Property.YSquaredIsIdentity
+  PASS  Property.ZSquaredIsIdentity
+  PASS  Property.SSquaredEqualsZ
+  PASS  Property.NormPreservedBy1000RandomGateApplications
+  PASS  Register.DefaultConstructorMakesAllZerosState
+  PASS  Register.BitstringConstructorPlacesAmplitudesBigEndian
+  PASS  Register.ConstructorAutoNormalises
+  PASS  Register.GetProbabReturnsBornRule
+  PASS  Register.FindInnerProductOnIdenticalStates
+  PASS  Register.FindInnerProductOnOrthogonalStates
+  PASS  Register.PrintProducesNonEmptyDiracString
+  PASS  Register.CollapseOnBasisStateIsDeterministic
+  PASS  Register.MeasureWithoutCollapseDoesNotMutateState
+  PASS  RegisterGates.HadamardOn1QubitProducesPlus
+  PASS  RegisterGates.HadamardOn2QubitsProducesUniform
+  PASS  RegisterGates.HadamardOn3QubitsProducesUniform
+  PASS  RegisterGates.XAppliedToAllFlipsAllBits
+  PASS  RegisterGates.YOnSingleQubitOf2QubitRegister
+  PASS  RegisterGates.ZOnSingleQubitNegatesAmplitudesWhereSet
+  PASS  RegisterGates.SAndTOnSingleQubitMatchPhases
+  PASS  RegisterGates.HOnQubit0Of3QubitRegister
+  PASS  QGates.HadamardOnZeroProducesPlus
+  PASS  QGates.HadamardOnOneProducesMinus
+  PASS  QGates.XOnZeroFlipsToOne
+  PASS  QGates.XOnOneFlipsToZero
+  PASS  QGates.YOnZeroProducesIOne
+  PASS  QGates.YOnOneProducesNegIZero
+  PASS  QGates.ZOnZeroIsIdentity
+  PASS  QGates.ZOnOneFlipsSign
+  PASS  QGates.SOnZeroIsIdentity
+  PASS  QGates.SOnOnePicksUpIPhase
+  PASS  QGates.TOnZeroIsIdentity
+  PASS  QGates.TOnOnePicksUpEighthRotation
+  PASS  QGates.HSquaredIsIdentity
+  PASS  QGates.SSquaredEqualsZ
+  PASS  Statistical.SingleHadamardChi2
+  PASS  Statistical.BellPhiPlusChi2
+  PASS  Statistical.GHZChi2
+  PASS  Statistical.DeutschConstantHasDeterministicInputBitChi2
+  PASS  CNOT.BasisState00
+  PASS  CNOT.BasisState01
+  PASS  CNOT.BasisState10FlipsTo11
+  PASS  CNOT.BasisState11FlipsTo10
+  PASS  CNOT.SuperpositionControlYieldsBellPhiPlus
+  PASS  SWAP.Swaps01And10
+  PASS  SWAP.Swaps10And01
+  PASS  CZ.FlipsOnly11Sign
+  PASS  Toffoli.AllControlsClearLeavesStateAlone
+  PASS  Toffoli.BothControlsSetFlipsTarget
+
+[64/64 passed, 0 failed]

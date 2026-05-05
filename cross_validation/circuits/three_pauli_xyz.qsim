@@ -1,0 +1,13 @@
+# Apply X, Y, Z in turn on each of three qubits and verify the resulting
+# state vector matches Qiskit. A simple non-trivial structural test that
+# touches every Pauli gate at every register position.
+qubits 3
+H 0
+H 1
+H 2
+X 0
+Y 1
+Z 2
+H 0
+H 1
+H 2

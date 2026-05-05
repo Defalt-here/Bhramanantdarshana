@@ -1,0 +1,7 @@
+# Deutsch with f(x) = 0 (constant). The full Deutsch circuit minus the
+# oracle, since constant-0 oracle is the identity.
+qubits 2
+X 1
+H 0
+H 1
+H 0
