@@ -1,26 +1,72 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg:         #0b0d14;   /* darkest background */
+  --surface:    #13151f;   /* panel / card surface */
+  --elevated:   #1c1f2e;   /* slightly raised element */
+  --border:     #2a2d3e;   /* subtle separator */
+  --accent:     #7c3aed;   /* violet-700  primary accent */
+  --accent-lit: #a78bfa;   /* violet-400  hover / highlight */
+  --text:       #e2e8f0;
+  --text-muted: #94a3b8;
+  --wire:       #374151;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+* { box-sizing: border-box; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Thin scrollbar for code-like panels */
+.thin-scroll::-webkit-scrollbar { width: 4px; height: 4px; }
+.thin-scroll::-webkit-scrollbar-track { background: var(--surface); }
+.thin-scroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+/* Wire running through each qubit row */
+.qubit-wire {
+  position: absolute;
+  top: 50%;
+  left: 0; right: 0;
+  height: 1px;
+  background: var(--wire);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Gate chip inside a circuit cell */
+.gate-chip {
+  width: 44px; height: 44px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center; justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  position: relative;
+  z-index: 10;
+  user-select: none;
+  cursor: pointer;
+  transition: transform 0.1s, filter 0.1s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.gate-chip:hover { transform: scale(1.12); filter: brightness(1.2); }
+
+/* Drop cell within the circuit canvas */
+.drop-cell {
+  width: 56px; height: 56px;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.drop-cell.over { background: rgba(124,58,237,0.15); border-radius: 8px; }
+.drop-cell.pending-target { background: rgba(245,158,11,0.12); border-radius: 8px; }
+
+/* Probability bar */
+.prob-bar {
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #7c3aed, #a78bfa);
+  transition: width 0.4s ease;
 }
